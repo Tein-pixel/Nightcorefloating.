@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+set -eu
+
+GRADLE_VERSION="8.2.1"
+BASE_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+CACHE_DIR="${GRADLE_USER_HOME:-$HOME/.gradle}/nightcore-distributions"
+DIST_DIR="$CACHE_DIR/gradle-$GRADLE_VERSION"
+ZIP_PATH="$CACHE_DIR/gradle-$GRADLE_VERSION-bin.zip"
+GRADLE_HOME="$DIST_DIR/gradle-$GRADLE_VERSION"
+
+mkdir -p "$CACHE_DIR"
+
+if [ ! -x "$GRADLE_HOME/bin/gradle" ]; then
+  if [ ! -f "$ZIP_PATH" ]; then
+    echo "Downloading Gradle $GRADLE_VERSION..."
+    if command -v curl >/dev/null 2>&1; then
+      curl -fL --retry 3 --retry-delay 2 "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip" -o "$ZIP_PATH"
+    elif command -v wget >/dev/null 2>&1; then
+      wget -O "$ZIP_PATH" "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+    else
+      echo "curl or wget is required to download Gradle." >&2
+      exit 1
+    fi
+  fi
+  rm -rf "$DIST_DIR"
+  mkdir -p "$DIST_DIR"
+  unzip -q "$ZIP_PATH" -d "$DIST_DIR"
+fi
+
+exec "$GRADLE_HOME/bin/gradle" "$@"

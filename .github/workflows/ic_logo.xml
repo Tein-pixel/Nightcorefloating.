@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- bulan sabit -->
+    <group android:scaleX="0.72" android:scaleY="0.72" android:pivotX="50" android:pivotY="50" android:translateX="3">
+        <path
+            android:fillColor="#00E5FF"
+            android:pathData="M44.36,22.05 A28,28 0 1 0 69.52,65.19 A25,25 0 0 1 44.36,22.05 Z" />
+    </group>
+    <!-- sudut bingkai scan -->
+    <path
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M20,32 V20 H32 M68,20 H80 V32 M20,68 V80 H32 M80,68 V80 H68" />
+    <!-- kilau -->
+    <path
+        android:fillColor="#FF2E88"
+        android:pathData="M69,27 L71.2,32.8 L77,35 L71.2,37.2 L69,43 L66.8,37.2 L61,35 L66.8,32.8 Z" />
+    <path
+        android:fillColor="#FF2E88"
+        android:pathData="M56,50 m-2.6,0 a2.6,2.6 0 1,0 5.2,0 a2.6,2.6 0 1,0 -5.2,0" />
+</vector>

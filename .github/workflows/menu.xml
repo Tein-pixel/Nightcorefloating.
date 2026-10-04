@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp" android:layout_height="wrap_content" android:orientation="vertical"
+    android:background="@drawable/bg_panel" android:padding="6dp" android:elevation="12dp">
+    <TextView android:id="@+id/mGoogle" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🔍  Google Search" android:textColor="#ffffff" android:padding="14dp" android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground" />
+    <TextView android:id="@+id/mAI" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="✨  Google AI" android:textColor="#00e5ff" android:padding="14dp" android:textSize="13sp"
+        android:textStyle="bold" android:background="?android:attr/selectableItemBackground" />
+    <TextView android:id="@+id/mTranslate" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="🌐  Translate" android:textColor="#ffffff" android:padding="14dp" android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground" />
+</LinearLayout>

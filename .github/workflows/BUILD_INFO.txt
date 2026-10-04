@@ -1,0 +1,5 @@
+Nightcore Floating v6.7
+Android 10 compatible build.
+Target SDK: 29
+Compile SDK: 34
+Release workflow publishes a signed debug APK so it can be installed directly.

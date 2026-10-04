@@ -1,0 +1,10 @@
+<resources>
+    <style name="Theme.Nightcore" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#00e5ff</item>
+        <item name="colorPrimaryVariant">#00b8d4</item>
+        <item name="colorOnPrimary">#050508</item>
+        <item name="android:windowBackground">#0a0a0f</item>
+        <item name="android:statusBarColor">#0a0a0f</item>
+        <item name="android:navigationBarColor">#0a0a0f</item>
+    </style>
+</resources>

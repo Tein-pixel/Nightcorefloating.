@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/cropContainer" android:layout_width="260dp" android:layout_height="180dp"
+        android:layout_gravity="center" android:background="@drawable/bg_crop">
+        <ImageView android:id="@+id/resizeHandle" android:layout_width="28dp" android:layout_height="28dp"
+            android:layout_gravity="bottom|end" android:src="@drawable/ic_resize" android:background="#00e5ff" android:padding="4dp" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_gravity="center_horizontal|top" android:layout_marginTop="60dp" android:elevation="14dp">
+        <Button android:id="@+id/btnCancel" android:layout_width="60dp" android:layout_height="60dp"
+            android:text="✗" android:textSize="26sp" android:textColor="#ffffff" android:background="@drawable/bg_btn_cancel" android:elevation="8dp" />
+        <Button android:id="@+id/btnConfirm" android:layout_width="60dp" android:layout_height="60dp"
+            android:layout_marginStart="20dp" android:text="✓" android:textSize="26sp" android:textColor="#050508"
+            android:background="@drawable/bg_btn_confirm" android:elevation="8dp" />
+    </LinearLayout>
+</FrameLayout>
